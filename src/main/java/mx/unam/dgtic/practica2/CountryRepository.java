@@ -1,10 +1,11 @@
-package mx.unam.dgtic.practica1;
+package mx.unam.dgtic.practica2;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface CountryRepository extends CrudRepository<Country, String> {
+public interface CountryRepository extends PagingAndSortingRepository<Country, String> {
 
 	public abstract List<Country> getByName(String name);
 

@@ -44,31 +44,44 @@
 <body>
 	<h1>Luis Angel Garcia Cervantes</h1>
 	<div class="bd-content ps-lg-4">
-<!-- 		<form> -->
-<!-- 			<div class="mb-3"> -->
-<!-- 				<label for="nombre" class="form-label">Nombre</label> <input -->
-<!-- 					type="text" class="form-control" id="nombre" name="nombre" -->
-<!-- 					th:value="${nombre}"> -->
-<!-- 			</div> -->
-<!-- 			<div class="mb-3"> -->
-<!-- 				<label for="paterno" class="form-label">Paterno</label> <input -->
-<!-- 					type="text" class="form-control" id="paterno" name="paterno" -->
-<!-- 					th:value="${paterno}"> -->
-<!-- 			</div> -->
-<!-- 			<input type="hidden" id="orden" name="orden" value="" /> -->
+		<form>
+			<div class="mb-3">
+				<label for="nombre" class="form-label">Nombre</label> <input
+					type="text" class="form-control" id="nombre" name="nombre"
+					th:value="${nombre}">
+			</div>
+			<div class="mb-3">
+				<label for="continente" class="form-label">Continente</label> <input
+					type="text" class="form-control" id="continente" name="continente"
+					th:value="${continente}">
+			</div>
+			<div class="mb-3">
+				<label for="superficie" class="form-label">Superficie</label> <input
+					type="text" class="form-control" id="superficie" name="superficie"
+					th:value="${superficie}">
+			</div>
+			<div class="mb-3">
+				<label for="esperanza" class="form-label">Esperanza de vida</label> <input
+					type="text" class="form-control" id="esperanza" name="esperanza"
+					th:value="${esperanza}">
+			</div>
 
-<!-- 			<button type="submit" class="btn btn-primary">Enviar</button> -->
-<!-- 		</form> -->
+			<input type="hidden" id="orden" name="orden" value="" />
+
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</form>
 	</div>
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th><a class="orden" href="">Codigo</a></th>
-				<th><a class="orden" href="">Nombre</a></th>
-				<th><a class="orden" href="">Continente</a></th>
-				<th><a class="orden" href="">Poblacion</a></th>
-				<th><a class="orden" href="">Esperanza de vida</a></th>
-				<th><a class="orden" href="">Gobernante</a></th>
+				<th><a class="orden" href="">code</a></th>
+				<th><a class="orden" href="">name</a></th>
+				<th><a class="orden" href="">continent</a></th>
+				<th><a class="orden" href="">population</a></th>
+				<th><a class="orden" href="">surfacearea</a></th>
+				<th><a class="orden" href="">lifeexpectancy</a></th>
+				<th><a class="orden" href="">gnp</a></th>
+				<th><a class="orden" href="">headofstate</a></th>
 			</tr>
 		</thead>
 
@@ -77,7 +90,9 @@
 			<td th:text="${#strings.trim(p.name)}" />
 			<td th:text="${p.continent}" />
 			<td th:text="${p.population}" />
+			<td th:text="${p.surfacearea}" />
 			<td th:text="${p.lifeexpectancy}" />
+			<td th:text="${p.gnp}" />
 			<td th:text="${p.headofstate}" />
 		</tr>
 	</table>

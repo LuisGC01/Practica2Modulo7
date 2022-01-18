@@ -1,4 +1,4 @@
-package mx.unam.dgtic.practica1;
+package mx.unam.dgtic.practica2;
 
 import java.util.Objects;
 

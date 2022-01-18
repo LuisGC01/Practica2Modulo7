@@ -1,4 +1,4 @@
-package mx.unam.dgtic.practica1;
+package mx.unam.dgtic.practica2;
 
 import java.util.Properties;
 
@@ -38,7 +38,7 @@ public class Practica2Application {
 		LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactoryBean.setDataSource(dataSource);
 		entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-		entityManagerFactoryBean.setPackagesToScan("mx.unam.dgtic.practica1");
+		entityManagerFactoryBean.setPackagesToScan("mx.unam.dgtic.practica2");
 
 		Properties jpaProperties = new Properties();
 		// jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");

@@ -8,10 +8,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>mx.unam.dgtic</groupId>
-	<artifactId>practica1</artifactId>
+	<artifactId>practica2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>practica1</name>
-	<description>Practica 1 del modulo7</description>
+	<description>Practica 2 del modulo7</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
