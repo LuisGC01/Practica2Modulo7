@@ -2,7 +2,7 @@ package mx.unam.dgtic.practica2;
 
 import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface CountryRepository extends PagingAndSortingRepository<Country, String> {
@@ -26,5 +26,8 @@ public interface CountryRepository extends PagingAndSortingRepository<Country, S
 	public abstract List<Country> getByLifeexpectancyGreaterThanAndContinent(float lifeexpectancy, String continent);
 
 	public abstract List<Country> getByHeadofstateIsNull();
+
+	@Query(value = "select * from countries where gnp >= ? order by gnp desc", nativeQuery = true)
+	public abstract List<Country> obtenerPorPibMayor(float pib);
 
 }
